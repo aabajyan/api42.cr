@@ -1,6 +1,6 @@
 # api42
 
-TODO: Write a description here
+42 API wrapper
 
 ## Installation
 
@@ -9,7 +9,7 @@ TODO: Write a description here
    ```yaml
    dependencies:
      api42:
-       github: your-github-user/api42
+       github: aabajyan/api42.cr
    ```
 
 2. Run `shards install`
@@ -18,6 +18,14 @@ TODO: Write a description here
 
 ```crystal
 require "api42"
+
+client = Api42::Client.new(
+  YOUR_APP_ID,
+  YOUR_SECRET_ID
+)
+
+user = client.user("your_username")
+puts "Full Name: #{user.first_name} #{user.last_name}"
 ```
 
 TODO: Write usage instructions here
@@ -28,7 +36,7 @@ TODO: Write development instructions here
 
 ## Contributing
 
-1. Fork it (<https://github.com/your-github-user/api42/fork>)
+1. Fork it (<https://github.com/aabajyan/api42.cr/fork>)
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
@@ -36,4 +44,4 @@ TODO: Write development instructions here
 
 ## Contributors
 
-- [your-name-here](https://github.com/your-github-user) - creator and maintainer
+- [Arsen Abajyan](https://github.com/aabajyan) - creator and maintainer
